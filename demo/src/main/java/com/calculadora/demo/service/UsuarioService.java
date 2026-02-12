@@ -19,11 +19,19 @@ public class UsuarioService {
     }
 
     public Usuario save(Usuario usuario) {
-        return usuarioRepository.save(usuario);
+    if (usuario.getName() == null || usuario.getEmail() == null || usuario.getPassword() == null) {
+        throw new IllegalArgumentException("Todos os campos são obrigatórios");
     }
+    return usuarioRepository.save(usuario);
+}
 
-    public void deleteById(long id) {
-        usuarioRepository.deleteById(id);
+
+   public void deleteById(Long id) {
+    if (!usuarioRepository.existsById(id)) {
+        throw new IllegalArgumentException("Usuário não encontrado");
     }
+    usuarioRepository.deleteById(id);
+}
+
 
 }

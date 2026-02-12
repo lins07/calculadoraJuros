@@ -31,7 +31,9 @@ public class UsuarioController {
     public  Usuario create(@RequestBody Usuario usuario) {
         return usuarioService.save(usuario);
     }
-
     
+}   
 
-}
+
+
+
