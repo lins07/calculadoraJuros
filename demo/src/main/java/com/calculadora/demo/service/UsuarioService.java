@@ -23,15 +23,19 @@ public class UsuarioService {
         throw new IllegalArgumentException("Todos os campos são obrigatórios");
     }
     return usuarioRepository.save(usuario);
-}
-
-
-   public void deleteById(Long id) {
-    if (!usuarioRepository.existsById(id)) {
-        throw new IllegalArgumentException("Usuário não encontrado");
     }
-    usuarioRepository.deleteById(id);
+
+    
+
 }
 
 
-}
+   //public void deleteById(Long id) {
+    //if (!usuarioRepository.existsById(id)) {
+        //throw new IllegalArgumentException("Usuário não encontrado");
+    //}
+    //usuarioRepository.deleteById(id);
+//}
+
+
+
