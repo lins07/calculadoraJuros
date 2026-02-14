@@ -8,11 +8,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 import com.calculadora.demo.model.Usuario;
 import com.calculadora.demo.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuarios")
+@Tag(name = "Usuários", description = "Operações relacionadas aos usuários do sistema")
 public class UsuarioController {
 
     
@@ -23,15 +27,18 @@ public class UsuarioController {
     }
 
     @GetMapping
+    @Operation(summary = "Obter todos os usuários", description = "Retorna uma lista de todos os usuários cadastrados no sistema")
     public List<Usuario> getAll() {
         return usuarioService.getAll();
     }
 
     @PostMapping
+    @Operation(summary = "Criar usuário", description = "Cadastra um novo usuário no sistema")
     public  Usuario create(@RequestBody Usuario usuario) {
         return usuarioService.save(usuario);
     }
-    
+
+
 }   
 
 
