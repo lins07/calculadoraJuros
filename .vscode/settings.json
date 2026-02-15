@@ -3,6 +3,9 @@
     "java.configuration.updateBuildConfiguration": "interactive",
     "cSpell.words": [
         "Calculadora",
+        "jsonwebtoken",
+        "projectlombok",
+        "springframework",
         "Usuario"
     ]
 }
