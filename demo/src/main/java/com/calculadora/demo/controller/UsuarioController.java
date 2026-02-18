@@ -32,13 +32,6 @@ public class UsuarioController {
         return usuarioService.getAll();
     }
 
-    @PostMapping
-    @Operation(summary = "Criar usuário", description = "Cadastra um novo usuário no sistema")
-    public  Usuario create(@RequestBody Usuario usuario) {
-        return usuarioService.save(usuario);
-    }
-
-
 }   
 
 
