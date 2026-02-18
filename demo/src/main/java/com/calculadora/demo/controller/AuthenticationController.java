@@ -20,7 +20,7 @@ import com.calculadora.demo.model.Usuario;
 import com.calculadora.demo.repository.UsuarioRepository;
 
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.Email;
+
 
 @RestController
 @RequestMapping("/auth")
