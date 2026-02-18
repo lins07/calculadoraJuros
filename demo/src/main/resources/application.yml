@@ -20,3 +20,4 @@ spring:
       token:
         secret: ${JWT_SECRET:my-super-secret-key-with-more-than-32-characters}
 
+
