@@ -24,7 +24,7 @@ public class UsuarioService implements UserDetailsService {
     }
 
     public Usuario save(Usuario usuario) {
-    if (usuario.getName() == null || usuario.getEmail() == null || usuario.getPassword() == null) {
+    if ( usuario.getEmail() == null || usuario.getPassword() == null) {
         throw new IllegalArgumentException("Todos os campos são obrigatórios");
     }
     return usuarioRepository.save(usuario);
@@ -40,17 +40,6 @@ public class UsuarioService implements UserDetailsService {
 
 
 }
-
-
-
-
-
-   //public void deleteById(Long id) {
-    //if (!usuarioRepository.existsById(id)) {
-        //throw new IllegalArgumentException("Usuário não encontrado");
-    //}
-    //usuarioRepository.deleteById(id);
-//}
 
 
 

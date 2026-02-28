@@ -1,5 +1,6 @@
 package com.calculadora.demo.model;
 
-public class JurosResponseDTO {
-
-}
+public record JurosResponseDTO(
+    Double juros,
+    Double montante
+) {}

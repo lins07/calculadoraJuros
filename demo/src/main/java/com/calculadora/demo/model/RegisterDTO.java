@@ -1,5 +1,3 @@
 package com.calculadora.demo.model;
 
-public record RegisterDTO(Role role, String email, String password) {
-
-}
+public record RegisterDTO(String email, String password) {}
